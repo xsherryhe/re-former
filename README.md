@@ -1,24 +1,6 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a standard HTML form built using Ruby on Rails form helper methods.
 
-Things you may want to cover:
+The project is intended as practice for using basic Rails syntax for creation and configuration of simple forms in views, including submission action and method, attribute naming conventions, form_with using model objects, and form input tags.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project is currently in progress.
