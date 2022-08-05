@@ -1,0 +1,48 @@
+<!--
+<form action="/users" method="post" accept-charset="UTF-8">
+  <label for="user[username]">Username:</label>
+  <input type="text" name="user[username]" id="user[username]">
+  <label for="user[email]">Email:</label>
+  <input type="email" name="user[email]" id="user[email]">
+  <label for="user[password]">Password:</label>
+  <input type="password" name="user[password]" id="user[password]">
+  <input type="submit" value="Submit">
+</form>
+-->
+
+<!--
+<%= form_tag '/users', method: :post do %>
+  <%= label_tag 'user[username]', 'Username:' %>
+  <%= text_field_tag 'user[username]' %>
+  <%= label_tag 'user[email]', 'Email:' %>
+  <%= text_field_tag 'user[email]' %>
+  <%= label_tag 'user[password]', 'Password:' %>
+  <%= password_field_tag 'user[password]' %>
+  <%= submit_tag 'Submit' %>
+<% end %>
+-->
+
+<%= form_with model: user do |form| %>
+  <div>
+    <%= form.label :username, 'New username:' %>
+    <%= form.text_field :username, value: 'user123' %>
+    <% user.errors.full_messages_for(:username).each do |message| %>
+      <div class="error_message"><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :email, 'New user email:' %>
+    <%= form.text_field :email, placeholder: 'example@example.com', size: 30 %>
+    <% user.errors.full_messages_for(:email).each do |message| %>
+      <div class="error_message"><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :password, 'New user password:' %>
+    <%= form.password_field :password %>
+    <% user.errors.full_messages_for(:password).each do |message| %>
+      <div class="error_message"><%= message %></div>
+    <% end %>
+  </div>
+  <%= form.submit 'Submit' %>
+<% end %>
