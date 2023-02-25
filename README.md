@@ -1,3 +1,6 @@
+# Re-Former
+
+## Introduction
 
 This project is a standard HTML form built using Ruby on Rails form helper methods.
 
